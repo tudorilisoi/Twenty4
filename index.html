@@ -4,11 +4,102 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Twenty4</title>
 
+    <!-- --------------------------- CSS stylesheet ---------------------------- -->
     <link rel="stylesheet" href="src/styles.css" />
+
+    <!-- -------------------------------- Icons -------------------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <title>Twenty4</title>
   </head>
   <body>
+    <header class="header-container">
+      <nav class="nav-container">
+        <div class="nav-top">
+          <img src="./src/img/twenty4-logos_transparent.png" alt="logo" />
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <ul class="nav-links">
+          <li>Home</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>SmartWatches</li>
+          <li>All</li>
+        </ul>
+      </nav>
+      <h1>The time is now</h1>
+      <button>Shop now</button>
+    </header>
+
+    <main>
+      <section class="category-container">
+        <a href="#" class="cartegory-card">
+          <img
+            src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
+            alt="product 1"
+          />
+          <h3>Men's watch</h3>
+          <p>View all</p>
+        </a>
+      </section>
+
+      <section class="promo-container">
+        <a href="#" class="product-card">
+          <img
+            src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
+            alt="product 1"
+          />
+          <h4>Men's watch</h4>
+          <p>View all</p>
+        </a>
+      </section>
+
+      <section class="promo-container">
+        <a href="#" class="product-card">
+          <img
+            src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
+            alt="product 1"
+          />
+          <h4>Men's watch</h4>
+          <p>View all</p>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <ul class="footer-list">
+        <li class="footer-list_title">contact us</li>
+        <li>+44 596 345 345</li>
+        <li>email@email.com</li>
+      </ul>
+      <ul class="footer-list">
+        <li class="footer-list_title">services</li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+
+      <ul class="footer-list">
+        <li class="footer-list_title">Information</li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+
+      <div class="newsletter-container">
+        <p>Subscribe to our newsletter</p>
+        <form>
+          <input type="text" />
+          <button>Subscribe</button>
+        </form>
+      </div>
+    </footer>
     <script src="src/js/main.js"></script>
   </body>
 </html>
