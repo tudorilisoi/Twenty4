@@ -126,6 +126,7 @@ hr {
 main {
   background-color: var(--bg-cl);
 }
+
 /* --------------------------------- Styling -------------------------------- */
 
 /* Header */
@@ -235,33 +236,42 @@ main {
 
 /* Categories */
 
-.category-container {
-}
-
 .category-card {
   width: 38rem;
   height: 48rem;
   margin-top: -10rem;
+}
 
+.product-card {
+  width: 22.7rem;
+  height: 34.5rem;
+}
+
+.category-card,
+.product-card {
   background-color: var(--white);
 
   text-align: center;
   overflow: hidden;
-  /* cursor: pointer; */
+  margin-top: 1px;
 }
-.category-card:not(:last-of-type) {
+.category-card:not(:last-of-type),
+.product-card:not(:last-of-type) {
   margin-right: 1px;
 }
 
-.category-card img {
+.category-card img,
+.product-card img {
   width: 50%;
-  margin: 4rem 0;
-
   transition: all 0.5s ease;
 }
 
-.category-card:hover img {
-  transform: scale(1.3);
+.category-card img {
+  margin: 4rem 0;
+}
+
+.product-card img {
+  margin: 3rem 0;
 }
 
 .category-card h3 {
@@ -273,6 +283,68 @@ main {
   color: var(--notification-cl);
 }
 
+.product-card h4 {
+  font-size: 2.5rem;
+  font-weight: 600;
+
+  color: var(--dark-cl);
+}
+
+.product-card p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--light-cl);
+}
+
+.icons {
+  display: block;
+  position: relative;
+}
+
+.icons i {
+  font-size: 3rem;
+  color: var(--notification-cl);
+  transition: opacity 0.3s ease-in, left 0.3s ease-in, right 0.3s ease-in,
+    transform 0.2s ease-in-out;
+}
+
+.icons i:first-of-type {
+  position: absolute;
+  left: -2rem;
+  opacity: 0;
+}
+
+.icons i:last-of-type {
+  position: absolute;
+  right: -2rem;
+  opacity: 0;
+}
+
+/* Hover */
+.category-card:hover img,
+.product-card:hover img {
+  transform: scale(1.3);
+}
+
 .category-card:hover p {
   color: var(--alert-cl);
+}
+
+.product-card:hover i:first-of-type {
+  left: 2rem;
+  opacity: 1;
+}
+
+.product-card:hover i:last-of-type {
+  right: 2rem;
+  opacity: 1;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-cl);
 }
