@@ -11,16 +11,32 @@
   --secondary-ff: "Unica One", sans-serif;
 
   /* Colors */
-  --primary-cl: hsl(0, 0%, 1%);
-  --secondary-cl: hsl(0, 0%, 54%);
+  --dark-cl: hsl(0, 0%, 1%);
+  --light-cl: hsl(0, 0%, 54%);
   --alert-cl: hsl(0, 100%, 24%);
+  --alert-light-cl: hsl(0, 100%, 64%);
   --notification-cl: hsl(242, 100%, 15%);
   --bg-cl: hsl(0, 0%, 97%);
+  --white: hsl(0, 0%, 100%);
 
   /* Sizes */
   --margin-xl: 10rem;
   --margin-sm: 5rem;
   --margin-xs: 1.5rem;
+}
+
+/* Helper classes */
+
+.box-p {
+  padding: 0 37rem;
+}
+
+.flex-h {
+  display: flex;
+}
+.flex-v {
+  display: flex;
+  flex-direction: column;
 }
 
 /* --------------------------------- Initial -------------------------------- */
@@ -34,6 +50,10 @@
 html {
   font-size: 62.5%;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 
 h1,
 h2,
@@ -44,7 +64,8 @@ h3,
 
 p,
 a,
-h3 + p {
+h3 + p,
+button {
   font-family: var(--primary-ff);
 }
 
@@ -55,6 +76,7 @@ h3 + p {
 
 h1 {
   font-size: 18rem;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -74,6 +96,7 @@ a,
 li {
   font-size: 1.5rem;
   text-decoration: none;
+  color: var(--white);
 }
 
 ul {
@@ -89,4 +112,117 @@ footer a {
 
   font-size: 2rem;
 }
+
+hr {
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  height: 1px;
+  background-color: hsl(0, 0%, 20%);
+  border: none;
+}
 /* --------------------------------- Styling -------------------------------- */
+
+/* Header */
+
+.header-container {
+  background: url("./img/header-bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100vw;
+  height: 65vh;
+  margin-top: -1rem;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-container h1 {
+  margin: 0;
+  color: var(--white);
+}
+
+.header-container button {
+  font-size: 3.5rem;
+  padding: 2.5rem 6rem;
+  margin-bottom: -11rem;
+
+  border: none;
+  border-radius: 2rem;
+
+  background-color: var(--alert-cl);
+  color: var(--white);
+
+  transition: background-color 0.2s ease;
+
+  cursor: pointer;
+}
+
+.header-container button:hover {
+  background-color: var(--alert-light-cl);
+}
+
+/* Navigation */
+.nav-container {
+  position: relative;
+  width: 100vw;
+  background-color: var(--dark-cl);
+  margin: 0 auto;
+}
+
+.nav-top {
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+
+  padding: 0.2rem 0;
+}
+
+.nav-top img {
+  max-width: 27.8rem;
+}
+
+.nav-top i {
+  font-size: 3rem;
+  padding: 1rem;
+
+  cursor: pointer;
+}
+
+.nav-links {
+  align-items: center;
+  padding: 1.7rem 0;
+}
+
+.nav-links li {
+  position: relative;
+
+  padding-bottom: 1rem;
+}
+
+.nav-links li:not(:last-of-type) {
+  margin-right: 5rem;
+}
+
+.nav-links li::after {
+  content: "";
+
+  width: 0%;
+  height: 5px;
+  background-color: var(--alert-cl);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
