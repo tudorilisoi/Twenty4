@@ -66,7 +66,8 @@ h3,
 p,
 a,
 h3 + p,
-button {
+button,
+input {
   font-family: var(--primary-ff);
 }
 
@@ -84,9 +85,17 @@ h2 {
   font-size: 3.5rem;
 }
 
+h3 {
+  margin: 0;
+}
+
 h3,
 h3 + p {
   font-size: 3rem;
+}
+
+h4 {
+  margin: 0;
 }
 
 p {
@@ -100,6 +109,7 @@ li {
 }
 
 ul {
+  padding: 0;
   list-style: none;
 }
 
@@ -124,6 +134,7 @@ hr {
 }
 
 main {
+  padding: 10rem 0;
   background-color: var(--bg-cl);
 }
 
@@ -234,17 +245,24 @@ main {
   width: 100%;
 }
 
-/* Categories */
+/* Cards */
+
+.promo-container + .promo-container {
+  margin-top: 5rem;
+}
 
 .category-card {
   width: 38rem;
   height: 48rem;
-  margin-top: -10rem;
+  margin-top: -20rem;
+  margin-bottom: 10rem;
 }
 
-.product-card {
+.product-card,
+.promo-card {
   width: 22.7rem;
   height: 34.5rem;
+  margin-top: 1px;
 }
 
 .category-card,
@@ -253,7 +271,6 @@ main {
 
   text-align: center;
   overflow: hidden;
-  margin-top: 1px;
 }
 .category-card:not(:last-of-type),
 .product-card:not(:last-of-type) {
@@ -271,7 +288,7 @@ main {
 }
 
 .product-card img {
-  margin: 3rem 0;
+  margin: 3.5rem 0;
 }
 
 .category-card h3 {
@@ -298,6 +315,7 @@ main {
 
 .icons {
   display: block;
+  height: 4rem;
   position: relative;
 }
 
@@ -318,6 +336,35 @@ main {
   position: absolute;
   right: -2rem;
   opacity: 0;
+}
+
+.best-sellers,
+.on-sale {
+  display: flex;
+  align-items: flex-end;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.best-sellers h2,
+.on-sale h2 {
+  text-transform: uppercase;
+  color: var(--white);
+
+  padding: 1.3rem;
+
+  background-color: hsla(0, 100%, 24%, 40%);
+  backdrop-filter: blur(10px);
+}
+
+.best-sellers {
+  background-image: url(./img/6e0a501bd0b8ed3175a80fb705a82530--timex-watches-prop-styling.jpg);
+}
+
+.on-sale {
+  background-image: url(./img/c1eee39f8c48676788139292f00d2709.jpg);
 }
 
 /* Hover */
@@ -346,5 +393,45 @@ main {
 
 /* Footer */
 footer {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--dark-cl);
+
+  padding: 10rem 37rem;
+  color: var(--white);
+}
+
+footer a {
+  color: var(--white);
+  transition: color 0.2s ease-in;
+}
+
+footer a:hover {
+  color: var(--light-cl);
+}
+
+.footer-list {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  grid-template-rows: repeat(5, auto);
+}
+
+.footer-list_title {
+  align-self: start;
+  justify-self: start;
+  grid-column: 1/2;
+  grid-row: 1 / -1;
+}
+
+.footer-list li {
+  grid-column: 2/3;
+}
+
+.newsletter-container input {
+  outline: none;
+
+  background-color: transparent;
+  border: 2px solid var(--white);
+  padding: 1rem 2rem;
+  color: var(--white);
 }
