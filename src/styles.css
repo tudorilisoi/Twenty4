@@ -2,3 +2,91 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+
+/* -------------------------------- Variables ------------------------------- */
+
+:root {
+  /* Font family */
+  --primary-ff: "Karla", sans-serif;
+  --secondary-ff: "Unica One", sans-serif;
+
+  /* Colors */
+  --primary-cl: hsl(0, 0%, 1%);
+  --secondary-cl: hsl(0, 0%, 54%);
+  --alert-cl: hsl(0, 100%, 24%);
+  --notification-cl: hsl(242, 100%, 15%);
+  --bg-cl: hsl(0, 0%, 97%);
+
+  /* Sizes */
+  --margin-xl: 10rem;
+  --margin-sm: 5rem;
+  --margin-xs: 1.5rem;
+}
+
+/* --------------------------------- Initial -------------------------------- */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+.footer-list_title {
+  font-family: var(--secondary-ff);
+}
+
+p,
+a,
+h3 + p {
+  font-family: var(--primary-ff);
+}
+
+a,
+h3 + p {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 18rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3,
+h3 + p {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2.5rem;
+}
+
+a,
+li {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+footer a {
+  font-weight: 100;
+}
+.footer-list_title {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+
+  font-size: 2rem;
+}
+/* --------------------------------- Styling -------------------------------- */
