@@ -53,6 +53,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 h1,
@@ -96,7 +97,6 @@ a,
 li {
   font-size: 1.5rem;
   text-decoration: none;
-  color: var(--white);
 }
 
 ul {
@@ -121,6 +121,10 @@ hr {
   height: 1px;
   background-color: hsl(0, 0%, 20%);
   border: none;
+}
+
+main {
+  background-color: var(--bg-cl);
 }
 /* --------------------------------- Styling -------------------------------- */
 
@@ -200,8 +204,10 @@ hr {
 
 .nav-links li {
   position: relative;
-
   padding-bottom: 1rem;
+}
+.nav-links a {
+  color: var(--white);
 }
 
 .nav-links li:not(:last-of-type) {
@@ -225,4 +231,48 @@ hr {
 
 .nav-links li:hover::after {
   width: 100%;
+}
+
+/* Categories */
+
+.category-container {
+}
+
+.category-card {
+  width: 38rem;
+  height: 48rem;
+  margin-top: -10rem;
+
+  background-color: var(--white);
+
+  text-align: center;
+  overflow: hidden;
+  /* cursor: pointer; */
+}
+.category-card:not(:last-of-type) {
+  margin-right: 1px;
+}
+
+.category-card img {
+  width: 50%;
+  margin: 4rem 0;
+
+  transition: all 0.5s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.3);
+}
+
+.category-card h3 {
+  color: var(--dark-cl);
+  text-transform: uppercase;
+}
+
+.category-card p {
+  color: var(--notification-cl);
+}
+
+.category-card:hover p {
+  color: var(--alert-cl);
 }
