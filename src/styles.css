@@ -263,6 +263,8 @@ main {
   width: 22.7rem;
   height: 34.5rem;
   margin-top: 1px;
+
+  cursor: default;
 }
 
 .category-card,
@@ -322,17 +324,21 @@ main {
 .icons i {
   font-size: 3rem;
   color: var(--notification-cl);
+  transition: transform 0.2s ease-out;
+}
+
+.icons a {
   transition: opacity 0.3s ease-in, left 0.3s ease-in, right 0.3s ease-in,
     transform 0.2s ease-in-out;
 }
 
-.icons i:first-of-type {
+.icons a:first-of-type {
   position: absolute;
   left: -2rem;
   opacity: 0;
 }
 
-.icons i:last-of-type {
+.icons a:last-of-type {
   position: absolute;
   right: -2rem;
   opacity: 0;
@@ -377,12 +383,12 @@ main {
   color: var(--alert-cl);
 }
 
-.product-card:hover i:first-of-type {
+.product-card:hover a:first-of-type {
   left: 2rem;
   opacity: 1;
 }
 
-.product-card:hover i:last-of-type {
+.product-card:hover a:last-of-type {
   right: 2rem;
   opacity: 1;
 }

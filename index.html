@@ -75,18 +75,6 @@
             sellers
           </h2>
         </div>
-        <a href="#" class="product-card">
-          <img
-            src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
-            alt="product 1"
-          />
-          <div class="icons">
-            <i class="far fa-eye"></i>
-            <i class="fas fa-cart-plus"></i>
-          </div>
-          <h4>Men's watch</h4>
-          <p>299.9£</p>
-        </a>
       </section>
 
       <section class="promo-container box-p flex-h">
@@ -96,18 +84,18 @@
             sale
           </h2>
         </div>
-        <a href="#" class="product-card">
+        <div class="product-card">
           <img
             src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
             alt="product 1"
           />
           <div class="icons">
-            <i class="far fa-eye"></i>
-            <i class="fas fa-cart-plus"></i>
+            <a href="#"><i class="far fa-eye"></i></a>
+            <a href="#"><i class="fas fa-cart-plus"></i></a>
           </div>
           <h4>Men's watch</h4>
           <p>299.9£</p>
-        </a>
+        </div>
       </section>
     </main>
 
@@ -139,6 +127,22 @@
         </form>
       </div>
     </footer>
+
+    <template id="product-card-tpl">
+      <div class="product-card">
+        <img
+          src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
+          alt="product 1"
+        />
+        <div class="icons">
+          <a href="#"><i class="far fa-eye"></i></a>
+          <a href="#"><i class="fas fa-cart-plus"></i></a>
+        </div>
+        <h4>Men's watch</h4>
+        <p>299.9£</p>
+      </div>
+    </template>
+
     <script src="src/js/main.js"></script>
   </body>
 </html>
