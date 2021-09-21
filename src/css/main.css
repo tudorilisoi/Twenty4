@@ -457,3 +457,14 @@ footer a:hover {
   padding: 1rem 2rem;
   color: var(--white);
 }
+
+/* Additional classes */
+.out-of-stock {
+  color: var(--alert-cl) !important;
+  text-transform: uppercase;
+}
+
+.out-of-stock img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
