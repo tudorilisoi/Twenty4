@@ -2,7 +2,7 @@ const STORE = [
   {
     id: 1,
     name: "submarine",
-    img: "../img/products/rolex.png",
+    img_src: "./src/img/products/arcadia-women.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "299",
@@ -10,12 +10,12 @@ const STORE = [
     gender: "men",
     category: "steel",
     on_sale: false,
-    best_seller: false,
+    best_seller: true,
   },
   {
     id: 2,
     name: "the scovill",
-    img: "../img/products/ingersoll-steel.png",
+    img_src: "./src/img/products/cartier-classic.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "299",
@@ -24,12 +24,12 @@ const STORE = [
     category: "steel",
 
     on_sale: false,
-    best_seller: false,
+    best_seller: true,
   },
   {
     id: 3,
     name: "valjoux",
-    img: "../img/products/arcadia-women.png",
+    img_src: "./src/img/products/arcadia-women.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "899",
@@ -43,7 +43,7 @@ const STORE = [
   {
     id: 4,
     name: "parah perpetual",
-    img: "../img/products/cartier-classic.png",
+    img_src: "./src/img/products/cartier-classic.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "399",
@@ -55,9 +55,9 @@ const STORE = [
     best_seller: false,
   },
   {
-    id: 4,
+    id: 5,
     name: "roadster",
-    img: "../img/products/cartier-gold-women.png",
+    img_src: "./src/img/products/cartier-gold-women.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "299",
@@ -69,9 +69,9 @@ const STORE = [
     best_seller: true,
   },
   {
-    id: 5,
+    id: 6,
     name: "calibre de cartier",
-    img: "../img/products/cartier-steel.png",
+    img_src: "./src/img/products/cartier-steel.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "799",
@@ -80,12 +80,12 @@ const STORE = [
     category: "steel",
 
     on_sale: true,
-    best_seller: true,
+    best_seller: false,
   },
   {
-    id: 6,
+    id: 7,
     name: "CORNAVIN CO.BD.02.L",
-    img: "../img/products/cornavin-leather.png",
+    img_src: "./src/img/products/cornavin-leather.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "799",
@@ -94,12 +94,12 @@ const STORE = [
     category: "leather",
 
     on_sale: true,
-    best_seller: true,
+    best_seller: false,
   },
   {
-    id: 7,
+    id: 8,
     name: "hampden black",
-    img: "../img/products/hampden-black-steel.png",
+    img_src: "./src/img/products/hampden-black-steel.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "699",
@@ -108,12 +108,12 @@ const STORE = [
     category: "steel",
 
     on_sale: true,
-    best_seller: true,
+    best_seller: false,
   },
   {
-    id: 8,
+    id: 9,
     name: "THE ORVILLE AUTOMATIC",
-    img: "../img/products/ingersoll-steel.png",
+    img_src: "./src/img/products/ingersoll-steel.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "300",
@@ -122,12 +122,12 @@ const STORE = [
     category: "steel",
 
     on_sale: true,
-    best_seller: true,
+    best_seller: false,
   },
   {
-    id: 9,
+    id: 10,
     name: "moto smart watch",
-    img: "../img/products/moto.png",
+    img_src: "./src/img/products/moto.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "299",
@@ -139,37 +139,9 @@ const STORE = [
     best_seller: true,
   },
   {
-    id: 10,
-    name: "Mechanical Classic, Leather",
-    img: "../img/products/orient-classic.png",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-    price: "500",
-    brand: "orient",
-    gender: "men",
-    category: "leather",
-
-    on_sale: false,
-    best_seller: true,
-  },
-  {
     id: 11,
     name: "Mechanical Classic, Leather",
-    img: "../img/products/orient-leather.png",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-    price: "600",
-    brand: "orient",
-    gender: "men",
-    category: "leather",
-
-    on_sale: false,
-    best_seller: false,
-  },
-  {
-    id: 11,
-    name: "Mechanical Classic, Leather strap",
-    img: "../img/products/orient-classic.png",
+    img_src: "./src/img/products/orient-classic.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "500",
@@ -182,8 +154,22 @@ const STORE = [
   },
   {
     id: 12,
+    name: "Mechanical Classic, Leather",
+    img_src: "./src/img/products/orient-leather.png",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    price: "600",
+    brand: "orient",
+    gender: "men",
+    category: "leather",
+
+    on_sale: false,
+    best_seller: true,
+  },
+  {
+    id: 13,
     name: "big crown",
-    img: "../img/products/oris-classic.png",
+    img_src: "./src/img/products/oris-classic.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "350",
@@ -192,26 +178,12 @@ const STORE = [
     category: "leather",
 
     on_sale: false,
-    best_seller: false,
-  },
-  {
-    id: 13,
-    name: "Mechanical Classic, Leather strap",
-    img: "../img/products/rolex.png",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-    price: "870",
-    brand: "rolex",
-    gender: "men",
-    category: "steel",
-
-    on_sale: false,
     best_seller: true,
   },
   {
-    id: 14,
+    id: 15,
     name: "samsung smart watch",
-    img: "../img/products/samsung-smart-watch.png",
+    img_src: "./src/img/products/samsung-smart-watch.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "200",
@@ -219,13 +191,13 @@ const STORE = [
     gender: "unisex",
     category: "smart-watch",
 
-    on_sale: false,
-    best_seller: true,
+    on_sale: true,
+    best_seller: false,
   },
   {
-    id: 15,
+    id: 16,
     name: "seiko gold",
-    img: "../img/products/seiko-gold.png",
+    img_src: "./src/img/products/seiko-gold.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "470",
@@ -233,13 +205,13 @@ const STORE = [
     gender: "men",
     category: "steel",
 
-    on_sale: false,
+    on_sale: true,
     best_seller: false,
   },
   {
-    id: 14,
-    name: "Mechanical Classic, Leather strap",
-    img: "../img/products/seiko-steel.png",
+    id: 17,
+    name: "seiko steel",
+    img_src: "./src/img/products/seiko-steel.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     price: "800",
@@ -248,34 +220,8 @@ const STORE = [
     category: "steel",
 
     on_sale: false,
-    best_seller: false,
-  },
-  {
-    id: 15,
-    name: "astron",
-    img: "../img/products/seiko-steel.png",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-    price: "800",
-    brand: "rolex",
-    gender: "men",
-    category: "steel",
-
-    on_sale: false,
-    best_seller: false,
-  },
-  {
-    id: 15,
-    name: "sony smart watch",
-    img: "../img/products/sony-smart-watch.png",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-    price: "250",
-    brand: "sony",
-    gender: "unisex",
-    category: "smart-watch",
-
-    on_sale: false,
-    best_seller: false,
+    best_seller: true,
   },
 ];
+
+export default STORE;

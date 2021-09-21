@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- --------------------------- CSS stylesheet ---------------------------- -->
-    <link rel="stylesheet" href="/node_modules/normalize.css/" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/normalize.css/"
+      type="text/html"
+    />
 
     <link rel="stylesheet" href="src/css/main.css" />
 
@@ -43,24 +47,18 @@
     <main>
       <section class="category-container box-p flex-h">
         <a href="#" class="category-card">
-          <img
-            src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
-            alt="product 1"
-          />
+          <img src="./src/img/products/rolex.png" alt="product 1" />
+          <h3>Men's watch</h3>
+          <p>View all</p>
+        </a>
+        <a href="#" class="category-card">
+          <img src="./src/img/products/arcadia-women.png" alt="product 1" />
           <h3>Men's watch</h3>
           <p>View all</p>
         </a>
         <a href="#" class="category-card">
           <img
-            src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
-            alt="product 1"
-          />
-          <h3>Men's watch</h3>
-          <p>View all</p>
-        </a>
-        <a href="#" class="category-card">
-          <img
-            src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
+            src="./src/img/products/samsung-smart-watch.png"
             alt="product 1"
           />
           <h3>Men's watch</h3>
@@ -68,7 +66,9 @@
         </a>
       </section>
 
-      <section class="promo-container box-p flex-h">
+      <section
+        class="promo-container promo-container_best-sellers box-p flex-h"
+      >
         <div href="#" class="promo-card best-sellers">
           <h2>
             best <br />
@@ -77,24 +77,12 @@
         </div>
       </section>
 
-      <section class="promo-container box-p flex-h">
+      <section class="promo-container promo-container_on-sale box-p flex-h">
         <div href="#" class="promo-card on-sale">
           <h2>
             on <br />
             sale
           </h2>
-        </div>
-        <div class="product-card">
-          <img
-            src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
-            alt="product 1"
-          />
-          <div class="icons">
-            <a href="#"><i class="far fa-eye"></i></a>
-            <a href="#"><i class="fas fa-cart-plus"></i></a>
-          </div>
-          <h4>Men's watch</h4>
-          <p>299.9£</p>
         </div>
       </section>
     </main>
@@ -131,10 +119,7 @@
     <!-- Product template -->
     <template id="product-card-tpl">
       <div class="product-card">
-        <img
-          src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
-          alt="product 1"
-        />
+        <div class="image"></div>
         <div class="icons">
           <a href="#"><i class="far fa-eye"></i></a>
           <a href="#"><i class="fas fa-cart-plus"></i></a>
@@ -144,6 +129,6 @@
       </div>
     </template>
 
-    <script src="src/js/main.js"></script>
+    <script type="module" src="src/js/main.js"></script>
   </body>
 </html>
