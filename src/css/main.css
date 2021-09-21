@@ -143,7 +143,7 @@ main {
 /* Header */
 
 .header-container {
-  background: url("./img/header-bg.jpg");
+  background: url("../img/header-bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -366,11 +366,11 @@ main {
 }
 
 .best-sellers {
-  background-image: url(./img/6e0a501bd0b8ed3175a80fb705a82530--timex-watches-prop-styling.jpg);
+  background-image: url(../img/6e0a501bd0b8ed3175a80fb705a82530--timex-watches-prop-styling.jpg);
 }
 
 .on-sale {
-  background-image: url(./img/c1eee39f8c48676788139292f00d2709.jpg);
+  background-image: url(../img/c1eee39f8c48676788139292f00d2709.jpg);
 }
 
 /* Hover */
