@@ -11,6 +11,7 @@
       href="/node_modules/normalize.css/"
       type="text/html"
     />
+    />
 
     <link rel="stylesheet" href="src/css/main.css" />
 
@@ -31,12 +32,28 @@
         <i class="fas fa-shopping-cart"></i>
       </div>
       <hr />
-      <ul class="nav-links flex-h">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Smart Watches</a></li>
-        <li><a href="#">All</a></li>
+      <ul id="nav-links" class="nav-links flex-h">
+        <li><a href="./index.html">Home</a></li>
+        <li>
+          <a href="./src/pages/man-products.html" data-product-type="man"
+            >Man</a
+          >
+        </li>
+        <li>
+          <a href="./src/pages/woman-products.html" data-product-type="woman"
+            >Woman</a
+          >
+        </li>
+        <li>
+          <a href="./src/pages/smart-watches.html" data-product-type="unisex"
+            >Smart Watches</a
+          >
+        </li>
+        <li>
+          <a href="./src/pages/all-products.html" data-product-type="all"
+            >All</a
+          >
+        </li>
       </ul>
     </nav>
     <header class="header-container box-p flex-v">
@@ -46,22 +63,22 @@
 
     <main>
       <section class="category-container box-p flex-h">
-        <a href="#" class="category-card">
+        <a href="./src/pages/products.html" class="category-card">
           <img src="./src/img/products/rolex.png" alt="product 1" />
-          <h3>Men's watch</h3>
+          <h3>man watches</h3>
           <p>View all</p>
         </a>
-        <a href="#" class="category-card">
-          <img src="./src/img/products/arcadia-women.png" alt="product 1" />
-          <h3>Men's watch</h3>
+        <a href="./src/pages/products.html" class="category-card">
+          <img src="./src/img/products/arcadia-woman.png" alt="product 1" />
+          <h3>Woman watches</h3>
           <p>View all</p>
         </a>
-        <a href="#" class="category-card">
+        <a href="./src/pages/products.html" class="category-card">
           <img
             src="./src/img/products/samsung-smart-watch.png"
             alt="product 1"
           />
-          <h3>Men's watch</h3>
+          <h3>Smart Watches</h3>
           <p>View all</p>
         </a>
       </section>
@@ -124,8 +141,8 @@
           <a href="#"><i class="far fa-eye"></i></a>
           <a href="#"><i class="fas fa-cart-plus"></i></a>
         </div>
-        <h4>Men's watch</h4>
-        <p>299.9£</p>
+        <h4></h4>
+        <p></p>
       </div>
     </template>
 

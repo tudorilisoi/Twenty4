@@ -5,8 +5,6 @@ function populateCardTemplate(product) {
     .getElementById("product-card-tpl")
     .content.cloneNode(true);
 
-  const currency = "$";
-
   cardTemplate.querySelector(".image").innerHTML = `<img src="${product.img_src}" alt="${product.name} image" />`; // prettier-ignore
   cardTemplate.querySelector("h4").textContent = product.name;
 
@@ -44,3 +42,22 @@ function appendProducts(products) {
 }
 
 appendProducts(STORE);
+
+//Navigation
+
+const location = window.location.pathname;
+document
+  .getElementById("nav-links")
+  .addEventListener("click", (event) => getProductType(event));
+
+function getProductType(event) {
+  const dataValue = event.target.dataset.productType;
+
+  const params = new URLSearchParams(location);
+  params.set("index.html", `${dataValue}`);
+
+  console.log(params.toString());
+  // const filterProducts = products.filter(
+  //   (product) => product.gender === dataValue || dataValue === "all"
+  // );
+}

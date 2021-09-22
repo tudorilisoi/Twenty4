@@ -22,23 +22,29 @@
       crossorigin="anonymous"
     />
 
-    <title>Payment</title>
+    <title>Products</title>
   </head>
-  <body>
+  <body id="products">
     <nav class="nav-container box-p">
       <div class="nav-top flex-h">
         <img src="../img/twenty4-logos_transparent.png" alt="logo" />
         <i class="fas fa-shopping-cart"></i>
       </div>
       <hr />
-      <ul class="nav-links flex-h">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Smart Watches</a></li>
-        <li><a href="#">All</a></li>
+      <ul id="nav-links" class="nav-links flex-h">
+        <li><a href="../../index.html">Home</a></li>
+        <li>
+          <a href="../pages/man-products.html">Man</a>
+        </li>
+        <li><a href="../pages/woman-products.html">Woman</a></li>
+        <li><a href="../pages/smart-watches.html">Smart Watches</a></li>
+        <li><a href="../pages/all-products.html">All</a></li>
       </ul>
     </nav>
+
+    <main>
+      <section id="product-contianer" class="product-container"></section>
+    </main>
 
     <footer>
       <ul class="footer-list">
@@ -69,6 +75,23 @@
       </div>
     </footer>
 
-    <script type="module" src="../js/main.js"></script>
+    <!-- Product template -->
+    <template id="product-card-tpl">
+      <div class="product-card">
+        <img
+          src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
+          alt="product 1"
+        />
+        <div class="icons">
+          <a href="#"><i class="far fa-eye"></i></a>
+          <a href="#"><i class="fas fa-cart-plus"></i></a>
+        </div>
+        <h4></h4>
+        <p></p>
+      </div>
+    </template>
+
+    <!-- <script type="module" src="../js/main.js"></script> -->
+    <script src="../js/products.js"></script>
   </body>
 </html>

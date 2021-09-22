@@ -6,35 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- --------------------------- CSS stylesheet ---------------------------- -->
-    <link rel="stylesheet" href="../../node_modules/normalize.css/" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/normalize.css/"
+      type="text/html"
+    />
 
     <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- -------------------------------- Icons -------------------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
 
     <title>Product</title>
   </head>
   <body>
-    <nav class="nav-container">
-      <div class="nav-top">
+    <nav class="nav-container box-p">
+      <div class="nav-top flex-h">
         <img src="./src/img/twenty4-logos_transparent.png" alt="logo" />
         <i class="fas fa-shopping-cart"></i>
       </div>
       <hr />
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Smart Watches</a></li>
-        <li><a href="#">All</a></li>
+      <ul id="nav-links" class="nav-links flex-h">
+        <li><a href="./index.html">Home</a></li>
+        <li>
+          <a href="./src/pages/products.html" data-product-type="man">Man</a>
+        </li>
+        <li><a href="#" data-product-type="woman">Woman</a></li>
+        <li><a href="#" data-product-type="unisex">Smart Watches</a></li>
+        <li><a href="#" data-product-type="all">All</a></li>
       </ul>
     </nav>
     <footer>
       <ul class="footer-list">
-        <li class="footer-list_title">contact us</li>
+        <span class="footer-list_title">contact us</span>
         <li>+44 596 345 345</li>
         <li>email@email.com</li>
       </ul>
       <ul class="footer-list">
-        <li class="footer-list_title">services</li>
+        <span class="footer-list_title">services</span>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Shipping</a></li>
         <li><a href="#">Returns</a></li>
@@ -42,7 +56,7 @@
       </ul>
 
       <ul class="footer-list">
-        <li class="footer-list_title">Information</li>
+        <span class="footer-list_title">Information</span>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms & Conditions</a></li>
       </ul>
