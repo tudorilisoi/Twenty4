@@ -24,7 +24,7 @@
 
     <title>Products</title>
   </head>
-  <body id="products">
+  <body id="all">
     <nav class="nav-container box-p">
       <div class="nav-top flex-h">
         <img src="../img/twenty4-logos_transparent.png" alt="logo" />
@@ -43,7 +43,10 @@
     </nav>
 
     <main>
-      <section id="product-contianer" class="product-container"></section>
+      <section
+        id="product-container"
+        class="product-container flex-h box-p"
+      ></section>
     </main>
 
     <footer>
@@ -78,10 +81,7 @@
     <!-- Product template -->
     <template id="product-card-tpl">
       <div class="product-card">
-        <img
-          src="./src/img/products/2cd43b_1b429deb1ad5421495cc764d6ae36707_mv2.png"
-          alt="product 1"
-        />
+        <div class="image"></div>
         <div class="icons">
           <a href="#"><i class="far fa-eye"></i></a>
           <a href="#"><i class="fas fa-cart-plus"></i></a>
@@ -92,6 +92,6 @@
     </template>
 
     <!-- <script type="module" src="../js/main.js"></script> -->
-    <script src="../js/products.js"></script>
+    <script type="module" src="../js/populate-pages.js"></script>
   </body>
 </html>
