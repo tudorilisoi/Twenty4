@@ -1,19 +1,45 @@
-import STORE from "./store.js";
-import populateCardTemplate from "./card-template.js";
+window.addEventListener("DOMContentLoaded", checkPage);
 
-function appendProducts(products) {
-  const onSaleCategory = document.querySelector(".promo-container_on-sale");
-  const bestSellersCategory = document.querySelector(".promo-container_best-sellers"); // prettier-ignore
+function checkPage() {
+  const bodyId = document.body.id;
 
-  const onSale = products.filter((product) => product.on_sale);
-  const bestSellers = products.filter((product) => product.best_seller);
-
-  onSale.forEach((product) =>
-    onSaleCategory.append(populateCardTemplate(product))
-  );
-  bestSellers.forEach((product) =>
-    bestSellersCategory.append(populateCardTemplate(product))
-  );
+  switch (bodyId) {
+    case "home":
+      getHomePage();
+      break;
+    case "watches":
+      getWatchesPage();
+      break;
+    case "product":
+      getProductPage();
+      break;
+  }
 }
 
-appendProducts(STORE);
+async function getHomePage() {
+  const getNavigation = await import("/src/js/navigation.js");
+  const getPromo = await import("/src/js/modules/promo.js");
+
+  getNavigation.default();
+
+  getPromo.default("best_sellers");
+  getPromo.default("on_sale");
+}
+
+async function getWatchesPage() {
+  const getNavigation = await import("/src/js/navigation.js");
+  const getPopulatedCategories = await import(
+    "/src/js/modules/populateCategory.js"
+  );
+
+  getNavigation.default();
+  getPopulatedCategories.default();
+}
+
+async function getProductPage() {
+  const getNavigation = await import("/src/js/navigation.js");
+  const getProduct = await import("/src/js/modules/product.js");
+
+  getNavigation.default();
+  getProduct.default();
+}

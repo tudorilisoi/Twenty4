@@ -24,23 +24,38 @@
 
     <title>Product</title>
   </head>
-  <body>
+  <body id="product">
     <nav class="nav-container box-p">
       <div class="nav-top flex-h">
-        <img src="./src/img/twenty4-logos_transparent.png" alt="logo" />
+        <img src="/src/img/twenty4-logos_transparent.png" alt="logo" />
         <i class="fas fa-shopping-cart"></i>
       </div>
       <hr />
       <ul id="nav-links" class="nav-links flex-h">
-        <li><a href="./index.html">Home</a></li>
-        <li>
-          <a href="./src/pages/products.html" data-product-type="man">Man</a>
-        </li>
-        <li><a href="#" data-product-type="woman">Woman</a></li>
-        <li><a href="#" data-product-type="unisex">Smart Watches</a></li>
-        <li><a href="#" data-product-type="all">All</a></li>
+        <li data-linkname="home">Home</li>
+        <li data-linkname="man">Man</li>
+        <li data-linkname="woman">Woman</li>
+        <li data-linkname="smart-watches">Smart Watches</li>
+        <li data-linkname="all">All</li>
       </ul>
     </nav>
+
+    <main>
+      <section class="product flex-h box-p">
+        <div class="product-images">
+          <img id="image" src="" alt="" />
+        </div>
+        <div class="product-information">
+          <h2 class="product-title"></h2>
+          <p class="product-price"></p>
+          <hr />
+          <p class="product-description"></p>
+
+          <button id="add-to-cart">Add to cart</button>
+        </div>
+      </section>
+    </main>
+
     <footer>
       <ul class="footer-list">
         <span class="footer-list_title">contact us</span>
@@ -71,5 +86,7 @@
     </footer>
 
     <script type="module" src="../js/main.js"></script>
+    <!-- <script type="module" src="../js/product.js"></script> -->
+    <!-- <script src="/src//js/navigation.js"></script> -->
   </body>
 </html>

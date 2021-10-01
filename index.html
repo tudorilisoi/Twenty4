@@ -25,35 +25,20 @@
 
     <title>Twenty4</title>
   </head>
-  <body>
+  <body id="home">
     <nav class="nav-container box-p">
       <div class="nav-top flex-h">
-        <img src="./src/img/twenty4-logos_transparent.png" alt="logo" />
+        <img src="/src/img/twenty4-logos_transparent.png" alt="logo" />
         <i class="fas fa-shopping-cart"></i>
       </div>
       <hr />
       <ul id="nav-links" class="nav-links flex-h">
-        <li><a href="./index.html">Home</a></li>
-        <li>
-          <a href="./src/pages/man-products.html" data-product-type="man"
-            >Man</a
-          >
-        </li>
-        <li>
-          <a href="./src/pages/woman-products.html" data-product-type="woman"
-            >Woman</a
-          >
-        </li>
-        <li>
-          <a href="./src/pages/smart-watches.html" data-product-type="unisex"
-            >Smart Watches</a
-          >
-        </li>
-        <li>
-          <a href="./src/pages/all-products.html" data-product-type="all"
-            >All</a
-          >
-        </li>
+        <li data-linkname="home">Home</li>
+
+        <li data-linkname="man">Man</li>
+        <li data-linkname="woman">Woman</li>
+        <li data-linkname="smart-watches">Smart Watches</li>
+        <li data-linkname="all">All</li>
       </ul>
     </nav>
     <header class="header-container box-p flex-v">
@@ -62,46 +47,17 @@
     </header>
 
     <main>
-      <section class="category-container box-p flex-h">
-        <a href="./src/pages/man-products.html" class="category-card">
-          <img src="./src/img/products/rolex.png" alt="product 1" />
-          <h3>man watches</h3>
-          <p>View all</p>
-        </a>
-        <a href="./src/pages/woman-products.html" class="category-card">
-          <img src="./src/img/products/arcadia-woman.png" alt="product 1" />
-          <h3>Woman watches</h3>
-          <p>View all</p>
-        </a>
-        <a href="./src/pages/smart-watches.html" class="category-card">
-          <img
-            src="./src/img/products/samsung-smart-watch.png"
-            alt="product 1"
-          />
-          <h3>Smart Watches</h3>
-          <p>View all</p>
-        </a>
-      </section>
-
-      <section
-        class="promo-container promo-container_best-sellers box-p flex-h"
-      >
-        <div href="#" class="promo-card best-sellers">
-          <h2>
-            best <br />
-            sellers
-          </h2>
-        </div>
-      </section>
-
-      <section class="promo-container promo-container_on-sale box-p flex-h">
-        <div href="#" class="promo-card on-sale">
-          <h2>
-            on <br />
-            sale
-          </h2>
-        </div>
-      </section>
+      <!-- Promo section template -->
+      <template id="promo-section-tpl">
+        <section class="promo-container box-p flex-h">
+          <div href="#" class="promo-card">
+            <h2>
+              best <br />
+              sellers
+            </h2>
+          </div>
+        </section>
+      </template>
     </main>
 
     <footer>
@@ -138,14 +94,16 @@
       <div class="product-card">
         <div class="image"></div>
         <div class="icons">
-          <a href="#"><i class="far fa-eye"></i></a>
-          <a href="#"><i class="fas fa-cart-plus"></i></a>
+          <i id="view" class="far fa-eye"></i>
+          <i id="add" class="fas fa-cart-plus"></i>
         </div>
         <h4></h4>
         <p></p>
       </div>
     </template>
 
-    <script type="module" src="src/js/main.js"></script>
+    <!-- <script type="module" src="/src/js/modules/promo.js"></script> -->
+    <script type="module" src="/src/js/main.js"></script>
+    <!-- <script src="/src/js/navigation.js"></script> -->
   </body>
 </html>
