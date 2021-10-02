@@ -28,11 +28,19 @@
     <nav class="nav-container box-p">
       <div class="nav-top flex-h">
         <img src="/src/img/twenty4-logos_transparent.png" alt="logo" />
-        <i class="fas fa-shopping-cart"></i>
+        <i id="cart-btn" class="fas fa-shopping-cart"></i>
+        <div id="cart-container" class="cart-container flex-h">
+          <ul></ul>
+          <div class="cart-checkout">
+            <h4 class="cart-checkout_total"></h4>
+            <button class="cart-checkout_btn"></button>
+          </div>
+        </div>
       </div>
       <hr />
       <ul id="nav-links" class="nav-links flex-h">
         <li data-linkname="home">Home</li>
+
         <li data-linkname="man">Man</li>
         <li data-linkname="woman">Woman</li>
         <li data-linkname="smart-watches">Smart Watches</li>

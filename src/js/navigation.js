@@ -1,11 +1,12 @@
-// import fetchData from "./modules/fetchData.js";
+import { getCart } from "./cart.js";
 
 export default function getNavigation() {
   const navLinks = document.querySelectorAll("#nav-links li");
+  const cart = document.getElementById("cart-btn");
 
-  navLinks.forEach((link) => link.addEventListener("click", handleEvent));
+  navLinks.forEach((link) => link.addEventListener("click", handleLinkEvent));
 
-  function handleEvent(event) {
+  function handleLinkEvent(event) {
     const linkName = event.target.dataset.linkname;
     const dropDownEl = event.target.parentElement.parentElement;
     const URL = `/src/pages/watches.html`;
@@ -22,4 +23,6 @@ export default function getNavigation() {
     // Categories links
     return (location = `${URL}?category=${linkName}`);
   }
+
+  cart.addEventListener("click", () => getCart());
 }
