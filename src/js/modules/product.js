@@ -1,4 +1,5 @@
 import fetchData from "./fetchData.js";
+import { addToCart } from "../cart.js";
 
 export default function getProduct() {
   fetchData().then((store) => appendToProductPage(store));
@@ -24,8 +25,9 @@ export default function getProduct() {
     image.alt = `${product.name} image`;
 
     title.textContent = product.name;
-    price.textContent = `${product.price} $`;
+    price.textContent = `${product.price} ${product.currency}`;
     description.textContent = product.description;
+    button.addEventListener("click", () => addToCart(product));
 
     if (!product.stock) {
       button.classList.add("disabled");

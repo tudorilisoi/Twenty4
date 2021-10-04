@@ -35,8 +35,6 @@ function handleAddToCartEvent(event, product) {
 
 // Checking product quantity
 function checkProductStock(product, cardTemplate) {
-  const currency = "$";
-
   if (!product.stock) {
     cardTemplate.querySelector(".product-card").classList.add("out-of-stock");
     cardTemplate.querySelector("p").textContent = "out of stock";
@@ -44,5 +42,5 @@ function checkProductStock(product, cardTemplate) {
     return cardTemplate;
   }
   if (product.stock)
-    return (cardTemplate.querySelector("p").textContent = `${product.price} ${currency}`); // prettier-ignore
+    return (cardTemplate.querySelector("p").textContent = `${product.price} ${product.currency}`); // prettier-ignore
 }

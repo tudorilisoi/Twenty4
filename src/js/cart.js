@@ -36,7 +36,7 @@ function renderCart() {
   const inCartProducts = [...addedProductsToCart];
 
   if (!inCartProducts.length)
-    return (cartContainer.innerHTML = `<h3>You'r cart is empty</h3>`);
+    return (cartContainer.innerHTML = `<h3>Cart is empty</h3>`);
   if (inCartProducts.length)
     return (cartContainer.innerHTML = `<ul>
                                         ${createCartListElements(
@@ -52,7 +52,7 @@ function createCartListElements(products) {
                     <div class="cart-product_info">
                       <img src="${product.img_src}" alt="${product.name} image">
                       <h4>${product.name}</h4>
-                      <p>${product.price}<p>
+                      <p>${product.price} ${product.currency}<p>
                     </div class="cart-checkout">
                     <i class="fas fa-trash-alt" id="deleteItem" data-productId=${product.id}></i>
                   </li>`
