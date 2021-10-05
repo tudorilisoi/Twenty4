@@ -1,4 +1,5 @@
-const addedProductsToCart = new Set();
+let addedProductsToCart =
+  JSON.parse(localStorage.getItem("addedProductsToCart")) || {};
 
 export function getCart() {
   const cartContainer = document.getElementById("cart-container");
@@ -15,7 +16,8 @@ export function getCart() {
   document.addEventListener("click", (event) => {
     const target = event.target;
 
-    if (target.id === "deleteItem") removeItem(target);
+    // debugger;
+    if (target.id === "deleteItem") return removeItem(target);
     if (target.id === "cart-btn" || target.offsetParent.id === cartContainer.id)
       return;
 
@@ -33,7 +35,7 @@ export function getCart() {
 
 function renderCart() {
   const cartContainer = document.getElementById("cart-container");
-  const inCartProducts = [...addedProductsToCart];
+  const inCartProducts = Object.values(addedProductsToCart);
 
   if (!inCartProducts.length)
     return (cartContainer.innerHTML = `<h3>Cart is empty</h3>`);
@@ -54,17 +56,21 @@ function createCartListElements(products) {
                       <h4>${product.name}</h4>
                       <p>${product.price} ${product.currency}<p>
                     </div class="cart-checkout">
-                    <i class="fas fa-trash-alt" id="deleteItem" data-productId=${product.id}></i>
+                    <i class="fas fa-trash-alt" id="deleteItem" data-productName="${product.name}"></i>
                   </li>`
   );
+
   return listItemElement.join("");
 }
 
 function removeItem(target) {
-  const itemId = parseInt(target.dataset.productid);
+  const targetName = target.dataset.productname;
 
-  addedProductsToCart.forEach(
-    (prop) => prop.id === itemId && addedProductsToCart.delete(prop)
+  delete addedProductsToCart[targetName];
+
+  localStorage.setItem(
+    "addedProductsToCart",
+    JSON.stringify(addedProductsToCart)
   );
 
   renderCart();
@@ -75,7 +81,14 @@ function createCartCheckout(products) {
 }
 
 export function addToCart(product) {
-  addedProductsToCart.add(product);
+  const cart = {
+    ...addedProductsToCart,
+    [product.name]: product,
+  };
+
+  localStorage.setItem("addedProductsToCart", JSON.stringify(cart));
+
+  addedProductsToCart = JSON.parse(localStorage.getItem("addedProductsToCart"));
 }
 
 export default addedProductsToCart;
