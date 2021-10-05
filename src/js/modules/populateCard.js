@@ -27,9 +27,6 @@ function handleViewEvent(event) {
 }
 
 function handleAddToCartEvent(event, product) {
-  const parentId = event.target.parentNode.parentNode.id;
-  const btn = event.target;
-
   addToCart(product);
 }
 
