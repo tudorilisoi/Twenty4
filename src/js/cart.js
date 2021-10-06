@@ -1,5 +1,4 @@
-let addedProductsToCart =
-  JSON.parse(localStorage.getItem("addedProductsToCart")) || {};
+let addedProductsToCart = JSON.parse(localStorage.getItem("addedProductsToCart")) || {}; // prettier-ignore
 
 export function getCart() {
   const cartContainer = document.getElementById("cart-container");
@@ -16,7 +15,8 @@ export function getCart() {
   document.addEventListener("click", (event) => {
     const target = event.target;
 
-    // debugger;
+    if (target.id === "checkout-btn")
+      return (location = "/src/pages/checkout.html");
     if (target.id === "deleteItem") return removeItem(target);
     if (target.id === "cart-btn" || target.offsetParent.id === cartContainer.id)
       return;
@@ -44,8 +44,14 @@ function renderCart() {
                                         ${createCartListElements(
                                           inCartProducts
                                         )}
-                                        ${createCartCheckout(inCartProducts)}
-                                      </ul>`);
+                                      </ul>
+                                      <div>
+                                      <h3>
+                                      Total: ${getTotalPrice(inCartProducts)} ${inCartProducts[0].currency}
+                                      </h3>
+                                      <button id="checkout-btn">Go to checkout</button>
+                                      </div>
+                                      `); // prettier-ignore
 }
 
 function createCartListElements(products) {
@@ -54,7 +60,7 @@ function createCartListElements(products) {
                     <div class="cart-product_info">
                       <img src="${product.img_src}" alt="${product.name} image">
                       <h4>${product.name}</h4>
-                      <p>${product.price} ${product.currency}<p>
+                      <p>${product.price} ${product.currency}</p>
                     </div class="cart-checkout">
                     <i class="fas fa-trash-alt" id="deleteItem" data-productName="${product.name}"></i>
                   </li>`
@@ -76,8 +82,15 @@ function removeItem(target) {
   renderCart();
 }
 
-function createCartCheckout(products) {
-  console.log("TBA");
+function getTotalPrice(products) {
+  const prices = products.map((product) => product.price);
+
+  const total = prices.reduce((value, acc) => value + acc);
+  const totalWithSeparators = total
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  return totalWithSeparators;
 }
 
 export function addToCart(product) {

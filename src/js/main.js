@@ -13,6 +13,9 @@ function checkPage() {
     case "product":
       getProductPage();
       break;
+    case "checkout":
+      getCheckout();
+      break;
   }
 }
 
@@ -42,4 +45,12 @@ async function getProductPage() {
 
   getNavigation.default();
   getProduct.default();
+}
+
+async function getCheckout() {
+  // const getNavigation = await import("/src/js/navigation.js");
+  const getCheckout = await import("/src/js/checkout.js");
+
+  // getNavigation.default();
+  getCheckout.default();
 }

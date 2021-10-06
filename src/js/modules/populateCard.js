@@ -12,9 +12,7 @@ export default function populateCardTemplate(product) {
   viewBtn.addEventListener("click", handleViewEvent);
 
   const addToCartBtn = cardTemplate.querySelector("#add");
-  addToCartBtn.addEventListener("click", (event) =>
-    handleAddToCartEvent(event, product)
-  );
+  addToCartBtn.addEventListener("click", () => handleAddToCartEvent(product));
 
   checkProductStock(product, cardTemplate);
   return cardTemplate;
@@ -26,7 +24,7 @@ function handleViewEvent(event) {
   location = `/src/pages/product.html?id=${parentId}`;
 }
 
-function handleAddToCartEvent(event, product) {
+function handleAddToCartEvent(product) {
   addToCart(product);
 }
 
